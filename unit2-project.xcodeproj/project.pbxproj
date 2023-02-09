@@ -9,21 +9,28 @@
 /* Begin PBXBuildFile section */
 		F96176892994160200E47671 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96176882994160200E47671 /* AppDelegate.swift */; };
 		F961768B2994160200E47671 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F961768A2994160200E47671 /* SceneDelegate.swift */; };
-		F961768D2994160200E47671 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F961768C2994160200E47671 /* ViewController.swift */; };
+		F961768D2994160200E47671 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F961768C2994160200E47671 /* MoviesViewController.swift */; };
 		F96176902994160200E47671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F961768E2994160200E47671 /* Main.storyboard */; };
 		F96176922994160300E47671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F96176912994160300E47671 /* Assets.xcassets */; };
 		F96176952994160300E47671 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F96176932994160300E47671 /* LaunchScreen.storyboard */; };
+		F961769E299421C100E47671 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F961769D299421C100E47671 /* Movie.swift */; };
+		F96176A02994278900E47671 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F961769F2994278900E47671 /* MovieCell.swift */; };
+		F96176A329942BCF00E47671 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = F96176A229942BCF00E47671 /* Nuke */; };
+		F96176AB2994519300E47671 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96176AA2994519300E47671 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F96176852994160200E47671 /* unit2-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "unit2-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F96176882994160200E47671 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F961768A2994160200E47671 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F961768C2994160200E47671 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F961768C2994160200E47671 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		F961768F2994160200E47671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F96176912994160300E47671 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F96176942994160300E47671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F96176962994160300E47671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F961769D299421C100E47671 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		F961769F2994278900E47671 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		F96176AA2994519300E47671 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F96176A329942BCF00E47671 /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +64,26 @@
 		F96176872994160200E47671 /* unit2-project */ = {
 			isa = PBXGroup;
 			children = (
+				F961769C299421B100E47671 /* Models */,
 				F96176882994160200E47671 /* AppDelegate.swift */,
 				F961768A2994160200E47671 /* SceneDelegate.swift */,
-				F961768C2994160200E47671 /* ViewController.swift */,
+				F961768C2994160200E47671 /* MoviesViewController.swift */,
+				F96176AA2994519300E47671 /* DetailViewController.swift */,
+				F961769F2994278900E47671 /* MovieCell.swift */,
 				F961768E2994160200E47671 /* Main.storyboard */,
 				F96176912994160300E47671 /* Assets.xcassets */,
 				F96176932994160300E47671 /* LaunchScreen.storyboard */,
 				F96176962994160300E47671 /* Info.plist */,
 			);
 			path = "unit2-project";
+			sourceTree = "<group>";
+		};
+		F961769C299421B100E47671 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F961769D299421C100E47671 /* Movie.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +102,9 @@
 			dependencies = (
 			);
 			name = "unit2-project";
+			packageProductDependencies = (
+				F96176A229942BCF00E47671 /* Nuke */,
+			);
 			productName = "unit2-project";
 			productReference = F96176852994160200E47671 /* unit2-project.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +133,9 @@
 				Base,
 			);
 			mainGroup = F961767C2994160200E47671;
+			packageReferences = (
+				F96176A129942BCF00E47671 /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = F96176862994160200E47671 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +163,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F961768D2994160200E47671 /* ViewController.swift in Sources */,
+				F961768D2994160200E47671 /* MoviesViewController.swift in Sources */,
 				F96176892994160200E47671 /* AppDelegate.swift in Sources */,
+				F961769E299421C100E47671 /* Movie.swift in Sources */,
+				F96176AB2994519300E47671 /* DetailViewController.swift in Sources */,
+				F96176A02994278900E47671 /* MovieCell.swift in Sources */,
 				F961768B2994160200E47671 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +384,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F96176A129942BCF00E47671 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F96176A229942BCF00E47671 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F96176A129942BCF00E47671 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F961767D2994160200E47671 /* Project object */;
 }
