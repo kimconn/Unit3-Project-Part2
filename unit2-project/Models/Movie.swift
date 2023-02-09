@@ -45,11 +45,23 @@ extension Movie {
               poster_path: URL(string: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQfiWXmDdp8eo6aoscFXAAH1xZz_jVpPVvLghbFHZE5JnKeAMgO")!,
               vote_average:7,
               vote_count:27,
-              popularity: 2321.607)
-        
-        
+              popularity:2321.607),
+        Movie(original_title: "Avatar: The Way of Water",
+              overview: "Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.",
+              poster_path: URL(string: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS4LOBdltP7rNDmLqOn9_Ak2lTNbmWP8K8-4RHSb5m6j2UyBw-p")!,
+              vote_average:7.7,
+              vote_count:5082,
+              popularity: 1635.498),
+        Movie(original_title: "Devotion",
+              overview: "The harrowing true story of two elite US Navy fighter pilots during the Korean War. Their heroic sacrifices would ultimately make them the Navy's most celebrated wingmen.",
+              poster_path: URL(string: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTnU1UmwuPqvWF-TMeByq4XvGElMhBHso5i4tR8RWUvmD7kfxmc")!,
+              vote_average:7.7,
+              vote_count:244,
+              popularity: 1490.109)
+    
     ]
 
     // We can now access this array of mock tracks anywhere like this:
     // let tracks = Tracks.mockTracks
 }//movie
+

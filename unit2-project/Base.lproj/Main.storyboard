@@ -85,7 +85,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xu7-d0-gR7" secondAttribute="bottom" id="qP9-Wh-RbN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="MOVIES" id="HwF-BX-LEB"/>
+                    <navigationItem key="navigationItem" title="Movies" id="HwF-BX-LEB" userLabel="Movies"/>
                     <connections>
                         <outlet property="tableView" destination="Xu7-d0-gR7" id="Q2z-YL-BVd"/>
                     </connections>
