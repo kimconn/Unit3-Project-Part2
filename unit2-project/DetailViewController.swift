@@ -24,9 +24,8 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // TODO: Pt 1 - Configure the UI elements with the passed in movie
         // Load the image located at the img URL and set it on the image view.
-        Nuke.loadImage(with: movie.poster_path, into: posterImageView)
+        Nuke.loadImage(with: URL(string: Movie.posterBaseURLString + movie.poster_path)!, into: posterImageView)
 //
         //Set labels with the associated movie values.
         TitleLabel.text = movie.original_title

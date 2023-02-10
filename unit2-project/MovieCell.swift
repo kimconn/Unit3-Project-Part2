@@ -14,6 +14,7 @@ class MovieCell: UITableViewCell {
     @IBOutlet weak var TitleLabel: UILabel!
     @IBOutlet weak var OverviewLabel: UILabel!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,8 +30,11 @@ class MovieCell: UITableViewCell {
     func configure(with movie: Movie) {
         TitleLabel.text = movie.original_title
         OverviewLabel.text = movie.overview
-
+//        posterImageView = movie.poster_path
+        
+        
         // Load image async via Nuke library image loading helper method
-        Nuke.loadImage(with: movie.poster_path, into: posterImageView)
+        Nuke.loadImage(with: URL(string: Movie.posterBaseURLString + movie.poster_path)!, into: posterImageView)
+
     }
 }

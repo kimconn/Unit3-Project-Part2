@@ -21,8 +21,70 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        // TODO: Pt 1 - Set movies property with mock movies array
-        movies = Movie.mockMovies
+        
+        // Create a URL for the request
+        let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=d4d4a9743e8f2c0784bc4905a14d6704")!
+        // Use the URL to instantiate a request
+        let request = URLRequest(url: url)
+
+        // Create a URLSession using a shared instance and call its dataTask method
+        // The data task method attempts to retrieve the contents of a URL based on the specified URL.
+        // When finished, it calls it's completion handler (closure) passing in optional values for data (the data we want to fetch), response (info about the response like status code) and error (if the request was unsuccessful)
+        let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
+
+            // Handle any errors
+            if let error = error {
+                print("❌ Network error: \(error.localizedDescription)")
+            }
+
+            // Make sure we have data
+            guard let data = data else {
+                print("❌ Data is nil")
+                return
+            }
+
+            // The `JSONSerialization.jsonObject(with: data)` method is a "throwing" function (meaning it can throw an error) so we wrap it in a `do` `catch`
+            // We cast the resultant returned object to a dictionary with a `String` key, `Any` value pair.
+            do {
+                // Create a JSON Decoder
+                let decoder = JSONDecoder()
+
+                // Use the JSON decoder to try and map the data to our custom model.
+                // TrackResponse.self is a reference to the type itself, tells the decoder what to map to.
+                let response = try decoder.decode(MoviesResponse.self, from: data)
+
+                // Access the array of movies from the `results` property
+                let movies = response.results
+                
+                // Execute UI updates on the main thread when calling from a background callback
+                DispatchQueue.main.async {
+
+                    // Set the view controller's moviea property as this is the one the table view references
+                    self?.movies = movies
+
+                    // Make the table view reload now that we have new data
+                    self?.tableView.reloadData()
+                }
+                
+                print("✅ \(movies)")
+            } catch {
+//                // Create a JSON Decoder
+//                let decoder = JSONDecoder()
+//
+//                // Use the JSON decoder to try and map the data to our custom model.
+//                // TrackResponse.self is a reference to the type itself, tells the decoder what to map to.
+//                let response = try decoder.decode(MoviesResponse.self, from: data)
+//
+//                // Access the array of tracks from the `results` property
+//                let movies = response.results
+//                print("✅ \(movies)")
+            }
+        }
+
+        // Initiate the network request
+        task.resume()
+//        print("👋 Below the closure")
+//
         print(movies)
         
         tableView.dataSource = self
@@ -68,4 +130,3 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
     }
     
 }//MVC class
-
