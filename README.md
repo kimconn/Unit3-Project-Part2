@@ -1,41 +1,33 @@
-# Project 2 - Flixster part 1
+# Project 3 - Flixster Part 2
 
 Submitted by: Kim Connolly
 
-Flixster is a movie browsing app that will use hardcoded Movie data models to display mocked data. I will add networking capabilities with an API in the second part of this project.
+Flixster is an app that introduces networking via Postman to debug/fetch real data from a third party server. XCode features implemented include collection views and tab bar controllers, both very common UI patterns found in apps.
 
-Time spent: 11 hours spent in total
+Time spent: 12 hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] Users are able to see a customized app icon and launch screen
-- [x] Your app should work for any screen size and orientation using AutoLayout constraints
-  - [ ] Mark here if you will demostrate auto layout implemention as horizontal rotation or different phone size or both, then erase this text
-- [x] Displays at least 5 different movies in a table view
-- [x] Can tap into detail view of movie with a full description, backdrop image, and title
+- [x] Implement network call and table view to display a list of movies currently playing (title, description, image)
+- [x] App has a collection view with the same list of movies
+- [x] Uses a tab bar controller to switch between collection view and table view screens
  
 The following **optional** features are implemented:
 
-- [x] Unique UI changes, such as background, font/color changes, etc.
-- [ ] User implements a collection view
-- [ ] User implemenets tab bar controller with at least two screens
-
-The following **additional** features are implemented:
-
-- [ ] List anything else that you can get done to improve the app functionality!
+- [ ] Make an additional network call to another end-point.	
+- [x] Allow users to scroll when context items are off-screen (table view implemention)
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-//<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
+<a href="https://imgur.com/mkqA677">Video Walkthrough</a>
 
 ## Notes
 
-Learned how to format screen further with TableViews and 
+Challenges during this assignment included the normal learning curve in learning how to implement API calls, collection views and tab bars in Storyboard.
 
 ## License
 
