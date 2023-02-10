@@ -2,7 +2,7 @@
 
 Submitted by: Kim Connolly
 
-Flixster is an app that introduces networking via Postman to debug/fetch real data from a third party server. XCode features implemented include collection views and tab bar controllers, both very common UI patterns found in apps.
+Flixster is  movie browsing app that introduces networking via Postman to debug/fetch real data from a third party server. XCode features implemented include collection views and tab bar controllers, both very common UI patterns found in apps.
 
 Time spent: 12 hours spent in total
 
